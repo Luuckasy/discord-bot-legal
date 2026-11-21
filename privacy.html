@@ -17,7 +17,7 @@
 <body>
 <nav><a href="terms">Terms of Service</a><a href="privacy">Privacy Policy</a></nav>
 <h1>Privacy Policy</h1>
-<p class="muted">Index-Tan &middot; Last updated 2026-11-20</p>
+<p class="muted">Index-Tan &middot; Last updated 2026-11-21</p>
 
 <p>This policy explains what data the Index-Tan Discord application ("the bot") processes, why, and how
 long it is kept.</p>
@@ -27,41 +27,66 @@ long it is kept.</p>
   <li><b>Roblox game data</b>: Roblox user ID, username and display name, join/leave times and session
       length, server identifiers, and the text, category and technical details of bug reports sent from
       inside our games.</li>
-  <li><b>Discord data</b>: in channels the bot is configured to read (bug-report channels), the content of
-      messages and attachments posted there, the author's Discord user ID and username, and message,
-      channel and server IDs.</li>
+  <li><b>Discord data</b>, only in the channels the server staff set up as bug-report or suggestion
+      channels: the text of messages posted there and their attachments (images, videos, files), the
+      author's Discord user ID, username and display name, the reaction counts on those messages, the
+      beginning of the message a post replies to (for context), and message, channel and server IDs.</li>
+  <li><b>Replies</b> the bot sends on behalf of the developers in those channels.</li>
 </ul>
-<p>We do not collect passwords, payment information, e-mail addresses or messages from channels the bot
-is not configured to read.</p>
+<p>The bot does not read any other channel. We do not collect passwords, payment information, e-mail
+addresses, server member lists or presence/activity status.</p>
 
 <h2>2. How we use it</h2>
-<p>Only to receive, organize, de-duplicate and post bug reports and player activity to the development
-team's Discord channels, so we can find and fix problems in our games. We do not sell data, show ads,
-or use it to build profiles.</p>
+<ul>
+  <li>To acknowledge each report with a reaction (📚 bug, 💡 suggestion).</li>
+  <li>To classify messages as bug, suggestion or general chat, group duplicate reports and keep the
+      development team's internal task list, and to mark a report with ✅ when it is fixed and 🚀 when
+      the fix is released.</li>
+  <li>To reply to a report through the bot, for example to ask for a video, the steps to reproduce or
+      the device used, or to explain that something is not a bug. Replies are sent by the development
+      team, sometimes written with the help of AI assistants.</li>
+  <li>To relay bug reports and player activity from our Roblox games to the development team's
+      Discord channels.</li>
+</ul>
+<p>We do not sell data, show ads, build profiles, or use Discord data to train or fine-tune AI models.</p>
 
-<h2>3. Storage and retention</h2>
-<p>The service runs on Railway. Grouping of duplicate reports is kept in memory for up to 24 hours and is
-erased whenever the service restarts. Reports that are posted to Discord remain in those Discord channels
-under Discord's own <a href="https://discord.com/privacy">Privacy Policy</a> until they are deleted
-by the server staff.</p>
+<h2>3. Automated classification</h2>
+<p>To classify and group reports, the text of messages from those channels (and the text they reply
+to), the channel name and the reaction counts are sent to <a href="https://groq.com">Groq</a>, an AI
+inference service. No Discord usernames, display names or user IDs are sent. The result only decides how
+a report is listed in the developers' task list.</p>
 
-<h2>4. Sharing</h2>
-<p>Data is shared only with Discord (to post the reports) and with our hosting provider (Railway) to run
-the service. We do not share it with anyone else, except when required by law.</p>
+<h2>4. Storage and retention</h2>
+<ul>
+  <li>The bot service runs on Railway. Grouping of duplicate in-game reports is kept in memory for up to
+      24 hours and erased whenever the service restarts.</li>
+  <li>Messages from the bug-report and suggestion channels (and copies of attachments saved to
+      investigate a report) are kept in a private archive on the developer's computer for up to
+      <b>90 days</b> and then deleted automatically.</li>
+  <li>The internal task list keeps a short summary written by the team and a link to the original
+      message, as part of our development records. It does not copy the message text or user IDs.</li>
+  <li>Messages remain in Discord under Discord's own <a href="https://discord.com/privacy">Privacy
+      Policy</a> until they are deleted by their author or the server staff.</li>
+</ul>
 
-<h2>5. Your choices</h2>
-<p>You can avoid having your Discord messages processed by not posting in the bug-report channels.
-Server admins can remove the bot at any time. To request deletion of a report about you, contact
-the developer through the Discord server where the bot is installed, and we will delete the related messages.</p>
+<h2>5. Sharing</h2>
+<p>Data is shared only with Discord (to read and post messages), our hosting provider (Railway) to run
+the service, and Groq for the automated classification described above. We do not share it with anyone
+else, except when required by law.</p>
 
-<h2>6. Children</h2>
+<h2>6. Your choices</h2>
+<p>You can avoid having your Discord messages processed by not posting in the bug-report and suggestion
+channels. To have a message removed from our archive and task list, contact the developer through the Discord server where the bot is installed with the
+message link; we delete it within 30 days. Server admins can remove the bot at any time.</p>
+
+<h2>7. Children</h2>
 <p>Our games and this bot follow the age requirements of Roblox and Discord. We do not knowingly collect
 more data from children than described above.</p>
 
-<h2>7. Changes</h2>
+<h2>8. Changes</h2>
 <p>We may update this policy; the date at the top shows the latest version.</p>
 
-<h2>8. Contact</h2>
+<h2>9. Contact</h2>
 <p>Questions about privacy: contact the developer through the Discord server where the bot is installed.</p>
 <p>See also our <a href="terms">Terms of Service</a>.</p>
 

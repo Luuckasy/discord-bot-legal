@@ -64,8 +64,12 @@ e-mail addresses, server member lists or presence/activity status.</p>
       understand players and prioritize fixes.</li>
   <li>To keep a knowledge base about each game made only from answers and statements written by the
       server staff and from the official update log (for example "how do I unlock X?" and the staff's
-      answer). Messages from regular players are never stored as facts. The bot does not reply to anyone
-      in community channels.</li>
+      answer). Messages from regular players are never stored as facts.</li>
+  <li>To answer game questions: in the question channels the developer lists, and in any channel where
+      someone mentions the bot or replies to it, the bot answers questions about the game using only answers
+      the developers checked in the game's code, in the language of the question. Each answer says it comes
+      from a bot that can be wrong and lets players rate it with ✅ or ❌. If the checked answers do not cover
+      a question, the bot stays silent (or, when mentioned, says it does not have a checked answer).</li>
   <li>When the community reading is set up for a server, the previous 30 days of the same channels may be
       read once, in the same way and with the same limits, so the summaries and the knowledge base start
       with some history.</li>
@@ -114,6 +118,9 @@ what is sent; it is not kept in the results.</p>
   <li>The knowledge base keeps short rewritten questions and the staff's answers, with a link to the
       staff message, while the information is still useful for the game. It contains no usernames or
       IDs.</li>
+  <li>For each answer the bot gives, it keeps its own answer, a short rewrite of the question made by the
+      AI service (no usernames or IDs), links to the question and the answer, and the number of ✅ and ❌
+      ratings for up to <b>30 days</b>, so the developers can fix wrong answers.</li>
   <li>Messages from moderation channels are kept only in the bot's memory for up to 2 hours and 10
       minutes. Messages pointed out for staff review are kept as a short description with a link to the
       message for up to <b>90 days</b>. The learned rules, the anonymous summary of how the staff punishes

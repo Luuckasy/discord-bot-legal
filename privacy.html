@@ -55,7 +55,10 @@ e-mail addresses, server member lists or presence/activity status.</p>
       the fix is released.</li>
   <li>To reply to a report through the bot, for example to ask for a video, the steps to reproduce or
       the device used, or to explain that something is not a bug. Replies are sent by the development
-      team, sometimes written with the help of AI assistants.</li>
+      team, sometimes written with the help of AI assistants. In servers where the developer turned it
+      on, the bot can also reply automatically to a bug report that is missing details, with a fixed
+      message asking for a video or screenshot, the steps, or the device; it does this at most once per
+      report.</li>
   <li>To write, once per hour, an anonymous summary for the developers of how the community feels about
       the game (a mood score, common complaints, praise, bugs, requests and open questions), so they can
       understand players and prioritize fixes.</li>
@@ -77,18 +80,20 @@ e-mail addresses, server member lists or presence/activity status.</p>
 <p>We do not sell data, show ads, build profiles, or use Discord data to train or fine-tune AI models.</p>
 
 <h2>3. Automated classification</h2>
+<p>The AI processing described below is done by <a href="https://www.anthropic.com">Anthropic</a>
+(Claude models) and, as a backup when it is unavailable, by <a href="https://groq.com">Groq</a> (the
+"AI services"). Neither receives Discord usernames, display names or user IDs.</p>
 <p>To classify and group reports, the text of messages from those channels (and the text they reply
-to), the channel name and the reaction counts are sent to <a href="https://groq.com">Groq</a>, an AI
-inference service. No Discord usernames, display names or user IDs are sent. The result only decides how
-a report is listed in the developers' task list.</p>
+to), the channel name and the reaction counts are sent to the AI services. The result decides how a
+report is listed in the developers' task list and whether the bot asks for missing details.</p>
 <p>For the hourly community summary, the text of the messages of that hour from the community channels
 (mentions removed, links reduced to the site name) and up to six attached images per hour are sent to
-Groq, without usernames, display names or user IDs. Each image is only described in one sentence (for
-example "game screen showing a connection error"); people in photos are not identified, and the image is
-not saved.</p>
-<p>For moderation, the text of the rules channels and, once per hour, of the listed moderation channels
-is sent to Groq after usernames, mentions and IDs are removed. A name written inside free text may
-remain in what is sent; it is not kept in the results.</p>
+the AI services. Each image is only described in one sentence (for example "game screen showing a
+connection error"); people in photos are not identified, and the image is not saved. From time to time a
+second model reviews a sample of this work against the same messages, to check its accuracy.</p>
+<p>For moderation, the text of the rules channels and of the listed moderation channels is sent to the
+AI services after usernames, mentions and IDs are removed. A name written inside free text may remain in
+what is sent; it is not kept in the results.</p>
 
 <h2>4. Storage and retention</h2>
 <ul>
@@ -123,8 +128,8 @@ remain in what is sent; it is not kept in the results.</p>
 
 <h2>5. Sharing</h2>
 <p>Data is shared only with Discord (to read and post messages), our hosting provider (Railway) to run
-the service, and Groq for the automated classification described above. We do not share it with anyone
-else, except when required by law.</p>
+the service, and the AI services (Anthropic, and Groq as a backup) for the automated processing described
+above. We do not share it with anyone else, except when required by law.</p>
 
 <h2>6. Your choices</h2>
 <p>You can avoid having your Discord messages processed by not posting in the bug-report and suggestion

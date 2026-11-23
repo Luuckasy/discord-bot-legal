@@ -17,7 +17,7 @@
 <body>
 <nav><a href="terms">Terms of Service</a><a href="privacy">Privacy Policy</a></nav>
 <h1>Privacy Policy</h1>
-<p class="muted">Index-Tan &middot; Last updated 2026-11-21</p>
+<p class="muted">Index-Tan &middot; Last updated 2026-11-23</p>
 
 <p>This policy explains what data the Index-Tan Discord application ("the bot") processes, why, and how
 long it is kept.</p>
@@ -31,10 +31,16 @@ long it is kept.</p>
       channels: the text of messages posted there and their attachments (images, videos, files), the
       author's Discord user ID, username and display name, the reaction counts on those messages, the
       beginning of the message a post replies to (for context), and message, channel and server IDs.</li>
-  <li><b>Replies</b> the bot sends on behalf of the developers in those channels.</li>
+  <li><b>Community channels</b>, only in the servers of our games that the developer has set up: the text
+      of messages posted in the channels every regular member can see (never staff-only channels, tickets
+      or private threads), the images attached to them, which message a message replies to, the channel
+      name, and whether the author has a staff role. Usernames and user IDs are not kept: the bot only
+      counts how many different people talked in each hour.</li>
+  <li><b>Replies</b> the bot sends on behalf of the developers in the bug-report and suggestion channels.</li>
 </ul>
-<p>The bot does not read any other channel. We do not collect passwords, payment information, e-mail
-addresses, server member lists or presence/activity status.</p>
+<p>The bot does not read staff-only channels, tickets, private threads or direct messages. We do not
+collect passwords, payment information, e-mail addresses, server member lists or presence/activity
+status.</p>
 
 <h2>2. How we use it</h2>
 <ul>
@@ -45,6 +51,13 @@ addresses, server member lists or presence/activity status.</p>
   <li>To reply to a report through the bot, for example to ask for a video, the steps to reproduce or
       the device used, or to explain that something is not a bug. Replies are sent by the development
       team, sometimes written with the help of AI assistants.</li>
+  <li>To write, once per hour, an anonymous summary for the developers of how the community feels about
+      the game (a mood score, common complaints, praise, bugs, requests and open questions), so they can
+      understand players and prioritize fixes.</li>
+  <li>To keep a knowledge base about each game made only from answers and statements written by the
+      server staff and from the official update log (for example "how do I unlock X?" and the staff's
+      answer). Messages from regular players are never stored as facts. The bot does not reply to anyone
+      in community channels.</li>
   <li>To relay bug reports and player activity from our Roblox games to the development team's
       Discord channels.</li>
 </ul>
@@ -55,6 +68,11 @@ addresses, server member lists or presence/activity status.</p>
 to), the channel name and the reaction counts are sent to <a href="https://groq.com">Groq</a>, an AI
 inference service. No Discord usernames, display names or user IDs are sent. The result only decides how
 a report is listed in the developers' task list.</p>
+<p>For the hourly community summary, the text of the messages of that hour from the community channels
+(mentions removed, links reduced to the site name) and up to six attached images per hour are sent to
+Groq, without usernames, display names or user IDs. Each image is only described in one sentence (for
+example "game screen showing a connection error"); people in photos are not identified, and the image is
+not saved.</p>
 
 <h2>4. Storage and retention</h2>
 <ul>
@@ -65,6 +83,16 @@ a report is listed in the developers' task list.</p>
       <b>90 days</b> and then deleted automatically.</li>
   <li>The internal task list keeps a short summary written by the team and a link to the original
       message, as part of our development records. It does not copy the message text or user IDs.</li>
+  <li>Messages from community channels are kept only in the bot's memory for up to 2 hours and 10
+      minutes, to write the hourly summary, and are never written to disk; a message deleted in Discord is
+      dropped from that memory. Images are held in memory only while they are described.</li>
+  <li>Hourly community summaries (no usernames or IDs; links to the staff messages they cite) are kept
+      for up to <b>90 days</b>. After that only a short record of each hour is kept, to chart how the
+      community mood changes over time: the mood score, the number of messages, people and staff messages,
+      and the short anonymous summary text, with no links, usernames or IDs.</li>
+  <li>The knowledge base keeps short rewritten questions and the staff's answers, with a link to the
+      staff message, while the information is still useful for the game. It contains no usernames or
+      IDs.</li>
   <li>Messages remain in Discord under Discord's own <a href="https://discord.com/privacy">Privacy
       Policy</a> until they are deleted by their author or the server staff.</li>
 </ul>
@@ -76,8 +104,10 @@ else, except when required by law.</p>
 
 <h2>6. Your choices</h2>
 <p>You can avoid having your Discord messages processed by not posting in the bug-report and suggestion
-channels. To have a message removed from our archive and task list, contact the developer through the Discord server where the bot is installed with the
-message link; we delete it within 30 days. Server admins can remove the bot at any time.</p>
+channels or in the public channels of a server where the bot reads the community. To have a message
+removed from our archive, task list, summaries or knowledge base, contact the developer through the Discord server where the bot is installed with the
+message link; we delete it within 30 days. Server admins can exclude any channel from the community
+reading, or remove the bot, at any time.</p>
 
 <h2>7. Children</h2>
 <p>Our games and this bot follow the age requirements of Roblox and Discord. We do not knowingly collect

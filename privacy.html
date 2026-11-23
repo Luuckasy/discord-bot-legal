@@ -36,11 +36,16 @@ long it is kept.</p>
       or private threads), the images attached to them, which message a message replies to, the channel
       name, and whether the author has a staff role. Usernames and user IDs are not kept: the bot only
       counts how many different people talked in each hour.</li>
+  <li><b>Rules and moderation channels</b>, only the ones the developer lists for a server: the rules
+      channels, punishment logs written by the staff or by moderation bots, AutoMod and anti-scam alerts,
+      punishment appeals, and the staff's moderation commands and discussion. Usernames, mentions and IDs
+      are removed automatically before this text is processed. Member join, leave and name-change logs
+      are never read.</li>
   <li><b>Replies</b> the bot sends on behalf of the developers in the bug-report and suggestion channels.</li>
 </ul>
-<p>The bot does not read staff-only channels, tickets, private threads or direct messages. We do not
-collect passwords, payment information, e-mail addresses, server member lists or presence/activity
-status.</p>
+<p>Apart from the moderation channels listed by the developer, the bot does not read staff-only
+channels, tickets, private threads or direct messages. We do not collect passwords, payment information,
+e-mail addresses, server member lists or presence/activity status.</p>
 
 <h2>2. How we use it</h2>
 <ul>
@@ -58,6 +63,14 @@ status.</p>
       server staff and from the official update log (for example "how do I unlock X?" and the staff's
       answer). Messages from regular players are never stored as facts. The bot does not reply to anyone
       in community channels.</li>
+  <li>When the community reading is set up for a server, the previous 30 days of the same channels may be
+      read once, in the same way and with the same limits, so the summaries and the knowledge base start
+      with some history.</li>
+  <li>To help the staff moderate: to learn the server rules, to summarize how the staff applies them
+      (which kind of infraction received which action, without names), and to point out, for the staff
+      to review, messages in community channels that may break a rule or show that someone may be at
+      risk (for example talk of self-harm). These are only suggestions: the bot never punishes, deletes
+      messages or contacts anyone, and every decision is made by a person on the staff.</li>
   <li>To relay bug reports and player activity from our Roblox games to the development team's
       Discord channels.</li>
 </ul>
@@ -73,6 +86,9 @@ a report is listed in the developers' task list.</p>
 Groq, without usernames, display names or user IDs. Each image is only described in one sentence (for
 example "game screen showing a connection error"); people in photos are not identified, and the image is
 not saved.</p>
+<p>For moderation, the text of the rules channels and, once per hour, of the listed moderation channels
+is sent to Groq after usernames, mentions and IDs are removed. A name written inside free text may
+remain in what is sent; it is not kept in the results.</p>
 
 <h2>4. Storage and retention</h2>
 <ul>
@@ -93,6 +109,14 @@ not saved.</p>
   <li>The knowledge base keeps short rewritten questions and the staff's answers, with a link to the
       staff message, while the information is still useful for the game. It contains no usernames or
       IDs.</li>
+  <li>Messages from moderation channels are kept only in the bot's memory for up to 2 hours and 10
+      minutes. Messages pointed out for staff review are kept as a short description with a link to the
+      message for up to <b>90 days</b>. The learned rules, the anonymous summary of how the staff punishes
+      (infraction type, action, duration), staff decisions and the bot's own observations, and the
+      anonymous topics of what the community asks, likes and complains about are kept while useful; they
+      contain no usernames or IDs.</li>
+  <li>The developers see these summaries in a private web dashboard served by the bot on Railway and
+      protected by a password. The copy of the summaries it shows is kept only in the service's memory.</li>
   <li>Messages remain in Discord under Discord's own <a href="https://discord.com/privacy">Privacy
       Policy</a> until they are deleted by their author or the server staff.</li>
 </ul>
